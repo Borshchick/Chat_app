@@ -35,8 +35,13 @@
     font-weight: 400;
 }
 .chatBody_date_separator{
-    width: 100%;
+    width: 90%;
 }
 .chatBody_separator_date{
     position: relative;
+    bottom: 20px;
+    left: 43%;
+    width: max-content;
+    background-color: white;
+    padding: 0 10px;
 }
