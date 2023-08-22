@@ -1,4 +1,8 @@
 
+const User = {
+    name: "You",
+    icon: require('./../images/user.png'),
+}
 const chats = [
     {name: 'general'},
     {name: 'support'},
@@ -21,6 +25,5 @@ const friends =[
     {name:'Leo', surname:'Gill',userimg:require('../images/Photo5.jpg')},
     {name:'Britney', surname:'Cooper',userimg:require('../images/Photo6.jpg')},
 ]
-
 export default chats
-export {friends}
+export {friends ,User}

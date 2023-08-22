@@ -2,25 +2,26 @@ import { useState } from "react";
 import "./chatTamplateStyles.css";
 import ChatInput from "../chatInput/ChatInput";
 import ChatBody from "../chatBody/ChatBody";
+import { User } from "../../../store/store";
 const Chat = (props) => {
   const [value, setValue] = useState("");
   const [chatValue, setChatValue] = useState("");
   const [messages, setMasseges] = useState([]);
+  const [currentUser] = useState(User);
   const chatValueHandler = (e) => {
     setChatValue(e.target.value);
   };
   const pressEnterHandler = (e) => {
-    if (e.key === "Enter"  ) {
-      if(chatValue !== ''){
+    if (e.key === "Enter") {
+      if (chatValue !== "") {
         const newMassage = {
-        message: e.target.value,
-        time: new Date().toLocaleTimeString(),
-        date: new Date().toLocaleDateString(),
+          message: e.target.value,
+          time: new Date().toLocaleTimeString(),
+          date: new Date().toLocaleDateString(),
+        };
+        setMasseges([...messages, newMassage]);
+        setChatValue("");
       }
-      setMasseges([...messages, newMassage]);
-      setChatValue("");
-      }
-      
     }
   };
   return (
@@ -72,7 +73,12 @@ const Chat = (props) => {
         </div>
       </div>
       <div className="chat_content_wrapper">
-        <ChatBody chatValue={chatValue} messages={messages} name={props.name}/>
+        <ChatBody
+          chatValue={chatValue}
+          messages={messages}
+          name={props.name}
+          currentUser={currentUser}
+        />
       </div>
       <div className="chat_main_input_wrapper">
         <ChatInput

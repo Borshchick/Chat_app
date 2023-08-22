@@ -1,11 +1,6 @@
-import { useState } from "react";
 import "./chatBodyStyles.css";
 
 const ChatBody = (props) => {
-  const [currentUser] = useState({
-    name: "You",
-    icon: require("./../../../images/user.png"),
-  });
   return (
     <div className="chatBody_main_wrapper">
       {props.messages.map((message, i) => {
@@ -23,13 +18,15 @@ const ChatBody = (props) => {
               <div>
                 <img
                   className="chatBody_user_icon"
-                  src={currentUser.icon}
+                  src={props.currentUser.icon}
                   alt="yourIcon"
                 />
               </div>
               <div className="chatBody_massage_main-wrapper">
                 <div className="chatBody_massage_head_wrapper">
-                  <div className="chatBody_username">{currentUser.name}</div>
+                  <div className="chatBody_username">
+                    {props.currentUser.name}
+                  </div>
                   <div className="chatBody_massage_time">{message.time}</div>
                 </div>
                 <div className="chatBody_masage_wrapper">
