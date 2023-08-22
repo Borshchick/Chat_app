@@ -1,0 +1,17 @@
+.error_page_main_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 63%;
+}
+.error_page_wrapper{
+
+    font-size: 20px;
+    color: gray;
+    padding-top: 50px;
+}
+.error_page_image{
+    width: 400px;
+    height: 400px;
+}

@@ -1,0 +1,42 @@
+
+.chatBody_massage_wrapper{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+}
+.chatBody_massage_wrapper img{
+    border-radius: 7px;
+}
+.chatBody_massage_head_wrapper{
+    display: flex;
+    gap: 20px;
+}
+.chatBody_user_icon{
+    width: 36px;
+}
+.chatBody_masage{
+    word-wrap: break-word;
+    font-size: 13px;
+    font-weight: 400;
+}
+.chatBody_massage_main-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.chatBody_username{
+    font-size: 12px;
+    font-weight: 700;
+}
+.chatBody_massage_time{
+    color: #8D8D8D;
+    font-size: 12px;
+    font-weight: 400;
+}
+.chatBody_date_separator{
+    width: 100%;
+}
+.chatBody_separator_date{
+    position: relative;
+}

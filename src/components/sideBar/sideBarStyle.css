@@ -1,0 +1,45 @@
+.sidebar_navigation_wrapper {
+  width: 75px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar_wrapper {
+  width: 75px;
+  background-image: url(../../images/Background.png);
+}
+.sideBar_navigation_li {
+  list-style-type: none;
+}
+.sideBar_navigation_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_navigation_image:hover {
+  cursor: pointer;
+}
+.addButton_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.addButton_circle {
+  font-size: 30px;
+  color: lightgray;
+  background-color: grey;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.addButton_circle:hover {
+  color: white;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: all 0.3s;
+}

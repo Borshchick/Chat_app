@@ -1,0 +1,73 @@
+.user_sidebar_main_wrapper{
+ background-color: lightgrey;
+ color: #5F6164;
+}
+.user_sidebar_media_wrapper{
+    display: flex;
+    /* justify-content: space-evenly; */
+    padding: 25px 0 17px 0;
+    gap: 10px;
+    
+}
+.user_sidebar_name_wrapper{
+    padding: 5px 15px 0px;
+
+}
+
+.user_sidebar_name{
+    font-weight: 700;
+    font-size: 16px;
+}
+.user_sidebar_profession{
+    font-weight: 400;
+    font-size: 12px;
+}
+.user_sidebar_media_wrapper div{
+    background: #E8E8EB;
+    border-radius: 100%;
+    width: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+.user_sidebar_media_icon_wrapper:hover{
+    background: grey;
+    filter: invert();
+    transition: all .3s;
+}
+.user_sidebar_buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.user_sidebar_buttons button{
+    background: #3577EF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow_button_div{
+    width: 25px;
+}
+.user_sidebar_buttons button:hover{
+    cursor: pointer;
+}
+.user_sidebar_massage_button{
+    width: 130px;
+}
+.user_sidebar_info_wrapper{
+    padding: 0 15px;
+}
+.user_sidebar_personal_info_wrapper{
+    padding-top: 20px;
+}
+.user_sidebar_personal_info{
+    margin-bottom: 20px;
+}
+.user_sidebar_info{
+    color: black;
+}

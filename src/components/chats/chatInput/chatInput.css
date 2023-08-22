@@ -1,0 +1,23 @@
+.chat_input_wrapper{
+    display: flex;
+    width: 100%;
+} input{
+    border: none;
+    outline: none;
+    width: 70%
+} img{
+    cursor: pointer;
+}
+#fileInput{
+    display: none;
+}
+.chat_icons{
+    display: flex;
+    gap: 20px;
+}
+.chat_text_input_wrapper{
+    width: 90%;
+}
+.chat_text_input{
+    padding: 0 40px;
+}
