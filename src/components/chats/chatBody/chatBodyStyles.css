@@ -45,3 +45,6 @@
     background-color: white;
     padding: 0 10px;
 }
+.chatBody_image_message{
+    max-width: 350px;
+}

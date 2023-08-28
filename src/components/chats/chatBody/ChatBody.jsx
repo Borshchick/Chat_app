@@ -5,7 +5,7 @@ const ChatBody = (props) => {
     <div className="chatBody_main_wrapper">
       {props.messages.map((message, i) => {
         return (
-          <div>
+          <div key={i}>
             <div>
               {i > 0 && message.date !== props.messages[i - 1].date && (
                 <div className="chatBody_date_separator_wrapper">
@@ -30,7 +30,12 @@ const ChatBody = (props) => {
                   <div className="chatBody_massage_time">{message.time}</div>
                 </div>
                 <div className="chatBody_masage_wrapper">
-                  <div className="chatBody_masage">{message.message}</div>
+                  {message.message && (
+                    <div className="chatBody_masage">{message.message}</div>
+                  )}
+                  {props.messageImage && (
+                    <img className="chatBody_image_message" src={URL.createObjectURL(message.image)} alt="" />
+                  )}
                 </div>
               </div>
             </div>

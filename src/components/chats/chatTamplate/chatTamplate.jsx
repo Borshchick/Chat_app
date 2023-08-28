@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./chatTamplateStyles.css";
 import ChatInput from "../chatInput/ChatInput";
 import ChatBody from "../chatBody/ChatBody";
@@ -8,21 +8,31 @@ const Chat = (props) => {
   const [chatValue, setChatValue] = useState("");
   const [messages, setMasseges] = useState([]);
   const [currentUser] = useState(User);
+  const [messageImage, setMessageImage] = useState();
+  const inputRef = useRef()
   const chatValueHandler = (e) => {
     setChatValue(e.target.value);
   };
   const pressEnterHandler = (e) => {
     if (e.key === "Enter") {
-      if (chatValue !== "") {
-        const newMassage = {
+      if (chatValue !== "" || messageImage) {
+        let newMassage = {
           message: e.target.value,
           time: new Date().toLocaleTimeString(),
           date: new Date().toLocaleDateString(),
+          image: messageImage,
         };
         setMasseges([...messages, newMassage]);
         setChatValue("");
       }
     }
+  };
+  const addFileHandler = (e) => {
+      const file = e.target.files[0];
+      console.log(file);
+      setMessageImage(file);
+      setChatValue(file.value)
+      inputRef.current.focus()
   };
   return (
     <div className="main_chat_wrapper">
@@ -74,6 +84,7 @@ const Chat = (props) => {
       </div>
       <div className="chat_content_wrapper">
         <ChatBody
+          messageImage={messageImage}
           chatValue={chatValue}
           messages={messages}
           name={props.name}
@@ -82,10 +93,13 @@ const Chat = (props) => {
       </div>
       <div className="chat_main_input_wrapper">
         <ChatInput
+          inputRef = {inputRef}
           chatValue={chatValue}
+          messageImage={messageImage}
           name={props.name}
           onChangeValue={chatValueHandler}
           onEnterKey={pressEnterHandler}
+          onChangeFile={addFileHandler}
         />
       </div>
     </div>

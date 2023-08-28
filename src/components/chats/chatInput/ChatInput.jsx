@@ -3,7 +3,7 @@ const ChatInput = (props) => {
   return (
     <div className="chat_input_wrapper">
       <div className="chat_icons">
-        <input id="fileInput" type="file"/>
+        <input id="fileInput" type="file" onChange={props.onChangeFile}/>
         <label htmlFor="fileInput">
           <img
             src={require("./../../../images/fileInput.png")}
@@ -20,6 +20,7 @@ const ChatInput = (props) => {
 
       <div className="chat_text_input_wrapper">
         <input
+          ref={props.inputRef}
           autoComplete="off"
           name={props.name}
           className="chat_text_input"
